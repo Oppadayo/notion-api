@@ -11,7 +11,7 @@ app.use(cors())
 
 const notion = new Client({auth: process.env.NOTION_API_KEY})
 
-app.listen('3000', () => console.log('start server localhost:3000'))
+app.listen(process.env.PORT || 3000, () => console.log('start server localhost:3000'))
 
 //middleware
 app.use(express.json()) //transforma tudo para json
